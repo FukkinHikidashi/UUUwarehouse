@@ -1,5 +1,10 @@
 import win32com.client
 
+# 起動確認
+# srcは変数を使える？
+
+filenName = "hoge"
+
 outlook = win32com.client.Dispatch("Outlook.Application")
 mail = outlook.CreateItem(0)
 
@@ -11,5 +16,6 @@ mail.body = "コンポG各位<br><br>\
     標記の件、UUU(K4U2S)倉庫への入材計画がありますので、\
     UUUの状況をご連絡します。<br>\
     <img src='photo/komatsu.jpg'>"
+# "<img src='" + fileName + "'>"
 
 mail.Send()
